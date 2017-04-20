@@ -1,0 +1,10 @@
+banana
+oranges
+lemons
+kiwis
+grapes
+strawberries
+melon
+peaches
+cherries
+apples
