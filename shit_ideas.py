@@ -1,23 +1,23 @@
 from random import choice, randint
 
-spirits = ['rye whiskey', 'scotch whiskey', 'bourbon', 'vodka', 'gin', 'jenever', 'rum', 'mezcal', 'port', 'tequila']
+spirits = ['dog walk', 'read a book', 'watch a film', 'stare blankly into the void', 'pondering', 'youtube spiral', 'recipe hunting', 'making new playlists', 'nest building', 'documentary watching']
 #List of ideas go in
-adjective = ['energetic', 'sketchy', 'suspicious', 'ridiculous']
+adjective = ['walk', 'drive', 'run', 'swim', 'cycle']
 #for storytelling
-verb = ['walk', 'drive', 'run', 'swim', 'cycle']
+verb = ['like a creep', 'with reckless abandon', 'suspiciously', 'ridiculously']
 #more storytelling
 spices = ['cinnamon', 'cloves', 'juniper berries', 'coffee beans']
-#more story telling
+#more story telling?
 
-method = ['shake', 'stir']
-missionstyle = ['serve over ice', 'serve neat', 'serve over crushed ice']
-location = ['old fashioned glass', 'collins glass', 'julep tin', 'tiki mug', 'flute', 'coup', 'martini glass']
+method = ['Adapt and Overcome', 'Panic']
+missionstyle = ['Give a motivational speech', 'Initiate a regime change','Summon some demons', 'Call upon your ancestors for protection']
+location = ['somewhere you have never been before', 'at work', 'on public transport', 'in your kitchen', 'in the middle of the road', 'screaming from the rooftops', 'whilst planning a quick exit']
 additional = ['top with soda', 'top with tonic', 'top with prosecco', ' ']
 
 recipe = []
 
 def randomMeasure():
-    return str(randint(1, 10) * 5) + 'minutes'
+    return str(randint(1, 10) * 5) + ' minutes'
 # time constraints
 
 def getSpiritForRecipe(recipe):
