@@ -44,8 +44,4 @@ for item in recipe:
     # add ridiculous backstory
     # add origin story 
     # alternative curveball origin - on request for more information
-    # build interface 
-    # run from pi ? downloadable as PDF recipe ? 
-    # run one from within the bar to download story about the drink ? 
-    # local network only // hotspot within the bar
-    # separate lists built as text files to be brought in and red  
+    # separate lists built as text files to be brought in and read  
