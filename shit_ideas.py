@@ -1,20 +1,25 @@
 from random import choice, randint
 
 spirits = ['rye whiskey', 'scotch whiskey', 'bourbon', 'vodka', 'gin', 'jenever', 'rum', 'mezcal', 'port', 'tequila']
-fruit = ['orange', 'lemon', 'lime', 'grapefruit']
-fruitstyle = ['peel', 'wedge', 'slice', 'twist', 'zest']
+#List of ideas go in
+adjective = ['energetic', 'sketchy', 'suspicious', 'ridiculous']
+#for storytelling
+verb = ['walk', 'drive', 'run', 'swim', 'cycle']
+#more storytelling
 spices = ['cinnamon', 'cloves', 'juniper berries', 'coffee beans']
+#more story telling
 
 method = ['shake', 'stir']
-icestyle = ['serve over ice', 'serve neat', 'serve over crushed ice']
-glass = ['old fashioned glass', 'collins glass', 'julep tin', 'tiki mug', 'flute', 'coup', 'martini glass']
+missionstyle = ['serve over ice', 'serve neat', 'serve over crushed ice']
+location = ['old fashioned glass', 'collins glass', 'julep tin', 'tiki mug', 'flute', 'coup', 'martini glass']
 additional = ['top with soda', 'top with tonic', 'top with prosecco', ' ']
 
 recipe = []
 
 def randomMeasure():
-    return str(randint(1, 10) * 5) + 'ml'
-# additional part in here which specifies a maximum measure amount? 120/150ml
+    return str(randint(1, 10) * 5) + 'minutes'
+# time constraints
+
 def getSpiritForRecipe(recipe):
     return randomMeasure() + ' ' + choice([spirit for spirit in spirits if spirit not in recipe])
 
@@ -27,10 +32,10 @@ for i in range(numberOfSpirits):
     recipe.append(getSpiritForRecipe(recipe))
 
 recipe.append(choice(method))
-recipe.append(choice(icestyle))
-recipe.append(choice(glass))
+recipe.append(choice(missionstyle))
+recipe.append(choice(location))
 recipe.append(choice(additional))
-recipe.append(choice(fruit) + ' ' + choice(fruitstyle))
+recipe.append(choice(adjective) + ' ' + choice(verb))
 recipe.append(choice(spices))
 
 for item in recipe:
