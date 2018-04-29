@@ -1,29 +1,47 @@
-import random
-import subprocess 
-#this imports random to the script
+from random import choice, randint
 
-measures = [' 5ml', ' 10ml', ' 15ml', ' 20ml', ' 25ml', ' 30ml', ' 35ml', ' 40ml', ' 45ml', ' 50ml' ]
-spirits = [' rye whiskey', ' scotch whiskey', ' bourbon', ' vodka', ' gin', ' jenever', ' rum', ' mezcal', ' port', ' tequila']
+spirits = ['rye whiskey', 'scotch whiskey', 'bourbon', 'vodka', 'gin', 'jenever', 'rum', 'mezcal', 'port', 'tequila']
+fruit = ['orange', 'lemon', 'lime', 'grapefruit']
+fruitstyle = ['peel', 'wedge', 'slice', 'twist', 'zest']
+spices = ['cinnamon', 'cloves', 'juniper berries', 'coffee beans']
 
-partone = random.choice(measures) + random.choice(spirits)
-parttwo = random.choice(measures) + random.choice(spirits)
+method = ['shake', 'stir']
+icestyle = ['serve over ice', 'serve neat', 'serve over crushed ice']
+glass = ['old fashioned glass', 'collins glass', 'julep tin', 'tiki mug', 'flute', 'coup', 'martini glass']
+additional = ['top with soda', 'top with tonic', 'top with prosecco', ' ']
 
-fruit = [' orange', ' lemon', ' lime', ' grapefruit']
-fruitstyle = [' peel', ' wedge', ' slice', ' twist', ' zest']
-spices = [' and cinnamon', ' and cloves', ' and juniper berries', ' and coffee beans']
-garnishlist = fruit + fruitstyle + spices
+recipe = []
 
-garnish = random.choice(fruit) + random.choice(fruitstyle) + random.choice(spices)
+def randomMeasure():
+    return str(randint(1, 10) * 5) + 'ml'
+# additional part in here which specifies a maximum measure amount? 120/150ml
+def getSpiritForRecipe(recipe):
+    return randomMeasure() + ' ' + choice([spirit for spirit in spirits if spirit not in recipe])
 
+# Add a random number of spirits to the recipe, minimum of 2, maximum of all available spirits
+#numberOfSpirits = randint((2,4) len(spirits))
+numberOfSpirits = randint(2, len(spirits))
+#python generating random numbers
 
+for i in range(numberOfSpirits):
+    recipe.append(getSpiritForRecipe(recipe))
 
-recipe = partone + parttwo + garnish 
-print recipe
+recipe.append(choice(method))
+recipe.append(choice(icestyle))
+recipe.append(choice(glass))
+recipe.append(choice(additional))
+recipe.append(choice(fruit) + ' ' + choice(fruitstyle))
+recipe.append(choice(spices))
 
+for item in recipe:
+    print " - %s" % item
 
-
-
-
-
-
-
+	# add method
+    # add curveball 
+    # add barspoon of something
+    # serve in glass
+    # serve in curveball glass
+    # add ridiculous backstory
+    # add origin story 
+    # alternative curveball origin - on request for more information
+    # separate lists built as text files to be brought in and read  
