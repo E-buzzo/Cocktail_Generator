@@ -12,7 +12,7 @@ spices = ['cinnamon', 'cloves', 'juniper berries', 'coffee beans']
 method = ['Adapt and Overcome', 'Panic']
 missionstyle = ['Give a motivational speech', 'Initiate a regime change','Summon some demons', 'Call upon your ancestors for protection']
 location = ['somewhere you have never been before', 'at work', 'on public transport', 'in your kitchen', 'in the middle of the road', 'screaming from the rooftops', 'whilst planning a quick exit']
-additional = ['top with soda', 'top with tonic', 'top with prosecco', ' ']
+additional = ['take a bow', 'congratulate yourself on a job well done', 'brush it off and carry on as if it never happened']
 
 recipe = []
 
